@@ -1,0 +1,19 @@
+#basic = 14500, hra = 10.25% of basic, speical allowance = 16.4% of basic + da, transport = 600, da = (x%) of basic (variable), result =
+
+def result(data):
+    x = float(input("Enter the value of x = "))
+    da = data[0] * x/100
+    result = 0
+    for i in range(len(data)):
+        result += data[i]
+    result += da
+    return result
+
+
+if _name_ == "_main_":
+    basic = 14500
+    hra = basic * 10/100
+    sa = basic * 14.5/100
+    tp = 600
+    data = [basic,hra,sa,tp]
+    print(result(data))
